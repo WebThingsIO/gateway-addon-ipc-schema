@@ -2,7 +2,7 @@
   "$schema": "http://json-schema.org/draft-07/schema#",
   "$id": "https://raw.githubusercontent.com/mozilla-iot/gateway-addon-ipc-schema/master/messages/register-plugin-reply.json",
   "title": "Register Plugin Reply",
-  "description": "Acknowledgement that the gateway has registered a plugin.",
+  "description": "Acknowledgement that the gateway has registered a plugin",
   "type": "object",
   "required": [
     "messageType",
@@ -12,13 +12,13 @@
     "messageType": {
       "type": "string",
       "title": "Message Type",
-      "description": "The message type, used by the IPC client and server to differentiate messages.",
+      "description": "The message type, used by the IPC client and server to differentiate messages",
       "const": "registerPluginReply"
     },
     "data": {
       "type": "object",
       "title": "Message Data",
-      "description": "Message-specific data.",
+      "description": "Message-specific data",
       "required": [
         "pluginId",
         "ipcBaseAddr",
@@ -28,17 +28,17 @@
         "pluginId": {
           "type": "string",
           "title": "Plugin ID",
-          "description": "ID of the plugin which has been registered."
+          "description": "ID of the plugin which has been registered"
         },
         "ipcBaseAddr": {
           "type": "string",
           "title": "IPC Base Address",
-          "description": "Base address of the nanomsg IPC socket."
+          "description": "Base address of the nanomsg IPC socket"
         },
         "userProfile": {
           "type": "object",
           "title": "User Profile",
-          "description": "User profile information, e.g. file paths of various things.",
+          "description": "User profile information, e.g. file paths of various things",
           "required": [
             "baseDir",
             "configDir",
@@ -51,32 +51,32 @@
             "baseDir": {
               "type": "string",
               "title": "Base Directory",
-              "description": "Base user profile directory, e.g. \"/home/pi/.mozilla-iot\"."
+              "description": "Base user profile directory, e.g. \"/home/pi/.mozilla-iot\""
             },
             "configDir": {
               "type": "string",
               "title": "Configuration Directory",
-              "description": "Configuration directory, e.g. \"/home/pi/.mozilla-iot/config\"."
+              "description": "Configuration directory, e.g. \"/home/pi/.mozilla-iot/config\""
             },
             "dataDir": {
               "type": "string",
               "title": "Data Directory",
-              "description": "Data directory, e.g. \"/home/pi/.mozilla-iot/data\"."
+              "description": "Data directory, e.g. \"/home/pi/.mozilla-iot/data\""
             },
             "mediaDir": {
               "type": "string",
               "title": "Media Directory",
-              "description": "Media directory, e.g. \"/home/pi/.mozilla-iot/media\"."
+              "description": "Media directory, e.g. \"/home/pi/.mozilla-iot/media\""
             },
             "logDir": {
               "type": "string",
               "title": "Log Directory",
-              "description": "Log directory, e.g. \"/home/pi/.mozilla-iot/log\"."
+              "description": "Log directory, e.g. \"/home/pi/.mozilla-iot/log\""
             },
             "gatewayDir": {
               "type": "string",
               "title": "Gateway Directory",
-              "description": "Gateway directory, e.g. \"/home/pi/mozilla-iot/gateway\"."
+              "description": "Gateway directory, e.g. \"/home/pi/mozilla-iot/gateway\""
             }
           }
         }
