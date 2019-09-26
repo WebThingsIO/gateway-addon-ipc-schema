@@ -1,8 +1,8 @@
 {
   "$schema": "http://json-schema.org/draft-07/schema#",
-  "$id": "https://raw.githubusercontent.com/mozilla-iot/gateway-addon-ipc-schema/master/messages/plugin-unloaded.json",
-  "title": "Plugin Unloaded",
-  "description": "Notification that a plugin has been unloaded",
+  "$id": "https://raw.githubusercontent.com/mozilla-iot/gateway-addon-ipc-schema/master/messages/plugin-register-request.json",
+  "title": "Plugin Register Request",
+  "description": "Register a plugin with the gateway",
   "type": "object",
   "required": [
     "messageType",
@@ -10,10 +10,10 @@
   ],
   "properties": {
     "messageType": {
-      "type": "string",
+      "type": "integer",
       "title": "Message Type",
       "description": "The message type, used by the IPC client and server to differentiate messages",
-      "const": "pluginUnloaded"
+      "const": 0
     },
     "data": {
       "type": "object",
@@ -26,7 +26,7 @@
         "pluginId": {
           "type": "string",
           "title": "Plugin ID",
-          "description": "ID of the plugin which has been unloaded"
+          "description": "ID of the plugin being registered"
         }
       }
     }

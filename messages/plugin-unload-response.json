@@ -1,8 +1,8 @@
 {
   "$schema": "http://json-schema.org/draft-07/schema#",
-  "$id": "https://raw.githubusercontent.com/mozilla-iot/gateway-addon-ipc-schema/master/messages/plugin-error.json",
-  "title": "Plugin Error",
-  "description": "Notification that a plugin has encountered an error while loading",
+  "$id": "https://raw.githubusercontent.com/mozilla-iot/gateway-addon-ipc-schema/master/messages/plugin-unload-response.json",
+  "title": "Plugin Unload Response",
+  "description": "Notification that a plugin has been unloaded",
   "type": "object",
   "required": [
     "messageType",
@@ -10,29 +10,23 @@
   ],
   "properties": {
     "messageType": {
-      "type": "string",
+      "type": "integer",
       "title": "Message Type",
       "description": "The message type, used by the IPC client and server to differentiate messages",
-      "const": "pluginError"
+      "const": 3
     },
     "data": {
       "type": "object",
       "title": "Message Data",
       "description": "Message-specific data",
       "required": [
-        "pluginId",
-        "message"
+        "pluginId"
       ],
       "properties": {
         "pluginId": {
           "type": "string",
           "title": "Plugin ID",
-          "description": "ID of the plugin which has had an error"
-        },
-        "message": {
-          "type": "string",
-          "title": "Message",
-          "description": "Error message"
+          "description": "ID of the plugin which has been unloaded"
         }
       }
     }

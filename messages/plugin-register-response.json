@@ -1,7 +1,7 @@
 {
   "$schema": "http://json-schema.org/draft-07/schema#",
-  "$id": "https://raw.githubusercontent.com/mozilla-iot/gateway-addon-ipc-schema/master/messages/register-plugin-reply.json",
-  "title": "Register Plugin Reply",
+  "$id": "https://raw.githubusercontent.com/mozilla-iot/gateway-addon-ipc-schema/master/messages/plugin-register-response.json",
+  "title": "Plugin Register Response",
   "description": "Acknowledgement that the gateway has registered a plugin",
   "type": "object",
   "required": [
@@ -10,10 +10,10 @@
   ],
   "properties": {
     "messageType": {
-      "type": "string",
+      "type": "integer",
       "title": "Message Type",
       "description": "The message type, used by the IPC client and server to differentiate messages",
-      "const": "registerPluginReply"
+      "const": 1
     },
     "data": {
       "type": "object",

@@ -13,8 +13,11 @@
       "title": "Message",
       "description": "The top-level message which encapsulates all message types",
       "oneOf": [
-        {"$ref": "messages/register-plugin.json"},
-        {"$ref": "messages/register-plugin-reply.json"}
+        {"$ref": "messages/plugin-register-request.json"},
+        {"$ref": "messages/plugin-register-response.json"},
+        {"$ref": "messages/plugin-unload-request.json"},
+        {"$ref": "messages/plugin-unload-response.json"},
+        {"$ref": "messages/plugin-error-notification.json"}
       ]
     }
   }
