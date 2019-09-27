@@ -27,7 +27,22 @@
         {"$ref": "messages/adapter-start-pairing-command.json"},
         {"$ref": "messages/adapter-unload-request.json"},
         {"$ref": "messages/adapter-unload-response.json"},
-        {"$ref": "messages/adapter-unpairing-prompt-notification.json"}
+        {"$ref": "messages/adapter-unpairing-prompt-notification.json"},
+        {"$ref": "messages/device-action-status-notification.json"},
+        {"$ref": "messages/device-added-notification.json"},
+        {"$ref": "messages/device-connected-state-notification.json"},
+        {"$ref": "messages/device-debug-command.json"},
+        {"$ref": "messages/device-event-notification.json"},
+        {"$ref": "messages/device-property-changed-notification.json"},
+        {"$ref": "messages/device-remove-action-request.json"},
+        {"$ref": "messages/device-remove-action-response.json"},
+        {"$ref": "messages/device-request-action-request.json"},
+        {"$ref": "messages/device-request-action-response.json"},
+        {"$ref": "messages/device-set-credentials-request.json"},
+        {"$ref": "messages/device-set-credentials-response.json"},
+        {"$ref": "messages/device-set-pin-request.json"},
+        {"$ref": "messages/device-set-pin-response.json"},
+        {"$ref": "messages/device-set-property-command.json"}
       ]
     }
   }

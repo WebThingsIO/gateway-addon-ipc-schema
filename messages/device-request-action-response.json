@@ -1,0 +1,64 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://raw.githubusercontent.com/mozilla-iot/gateway-addon-ipc-schema/master/messages/device-request-action-response.json",
+  "title": "Device Request Action Response",
+  "description": "Notice that an action has been requested on a device",
+  "type": "object",
+  "required": [
+    "messageType",
+    "data"
+  ],
+  "properties": {
+    "messageType": {
+      "type": "integer",
+      "title": "Message Type",
+      "description": "The message type, used by the IPC client and server to differentiate messages",
+      "const": 8205
+    },
+    "data": {
+      "type": "object",
+      "title": "Message Data",
+      "description": "Message-specific data",
+      "required": [
+        "pluginId",
+        "adapterId",
+        "deviceId",
+        "actionName",
+        "actionId",
+        "success"
+      ],
+      "properties": {
+        "pluginId": {
+          "type": "string",
+          "title": "Plugin ID",
+          "description": "ID of the plugin"
+        },
+        "adapterId": {
+          "type": "string",
+          "title": "Adapter ID",
+          "description": "ID of the adapter"
+        },
+        "deviceId": {
+          "type": "string",
+          "title": "Device ID",
+          "description": "ID of the device"
+        },
+        "actionName": {
+          "type": "string",
+          "title": "Action Name",
+          "description": "Name of the action"
+        },
+        "actionId": {
+          "type": "string",
+          "title": "Action ID",
+          "description": "ID of the action"
+        },
+        "success": {
+          "type": "boolean",
+          "title": "Success",
+          "description": "Whether or not the operation was successful"
+        }
+      }
+    }
+  }
+}

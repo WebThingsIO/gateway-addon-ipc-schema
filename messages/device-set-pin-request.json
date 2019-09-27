@@ -1,0 +1,58 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://raw.githubusercontent.com/mozilla-iot/gateway-addon-ipc-schema/master/messages/device-set-pin-request.json",
+  "title": "Device Set PIN Request",
+  "description": "Set the PIN on a device",
+  "type": "object",
+  "required": [
+    "messageType",
+    "data"
+  ],
+  "properties": {
+    "messageType": {
+      "type": "integer",
+      "title": "Message Type",
+      "description": "The message type, used by the IPC client and server to differentiate messages",
+      "const": 8193
+    },
+    "data": {
+      "type": "object",
+      "title": "Message Data",
+      "description": "Message-specific data",
+      "required": [
+        "pluginId",
+        "adapterId",
+        "messageId",
+        "deviceId",
+        "pin"
+      ],
+      "properties": {
+        "pluginId": {
+          "type": "string",
+          "title": "Plugin ID",
+          "description": "ID of the plugin"
+        },
+        "adapterId": {
+          "type": "string",
+          "title": "Adapter ID",
+          "description": "ID of the adapter"
+        },
+        "messageId": {
+          "type": "integer",
+          "title": "Message ID",
+          "description": "Unique ID of this message"
+        },
+        "deviceId": {
+          "type": "string",
+          "title": "Device ID",
+          "description": "ID of the device"
+        },
+        "pin": {
+          "type": "string",
+          "title": "PIN",
+          "description": "PIN to set"
+        }
+      }
+    }
+  }
+}
