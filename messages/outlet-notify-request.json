@@ -60,14 +60,9 @@
           "description": "Message of the notification"
         },
         "level": {
-          "type": "integer",
-          "enum": [
-            0,
-            1,
-            2
-          ],
           "title": "Level",
-          "description": "Priority level of the notification, 0 being the lowest priority"
+          "description": "Priority level of the notification, 0 being the lowest priority",
+          "$ref": "definitions.json#/definitions/NotificationLevel"
         }
       }
     }
