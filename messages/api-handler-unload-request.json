@@ -1,0 +1,40 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://raw.githubusercontent.com/mozilla-iot/gateway-addon-ipc-schema/master/messages/api-handler-unload-request.json",
+  "title": "Adapter Unload Request",
+  "description": "Request that an API handler is unloaded",
+  "type": "object",
+  "required": [
+    "messageType",
+    "data"
+  ],
+  "properties": {
+    "messageType": {
+      "type": "integer",
+      "title": "Message Type",
+      "description": "The message type, used by the IPC client and server to differentiate messages",
+      "const": 20481
+    },
+    "data": {
+      "type": "object",
+      "title": "Message Data",
+      "description": "Message-specific data",
+      "required": [
+        "pluginId",
+        "packageName"
+      ],
+      "properties": {
+        "pluginId": {
+          "type": "string",
+          "title": "Plugin ID",
+          "description": "ID of the plugin"
+        },
+        "packageName": {
+          "type": "string",
+          "title": "Package Name",
+          "description": "Name of the add-on package"
+        }
+      }
+    }
+  }
+}

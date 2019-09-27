@@ -49,7 +49,12 @@
         {"$ref": "messages/outlet-added-notification.json"},
         {"$ref": "messages/outlet-notify-request.json"},
         {"$ref": "messages/outlet-notify-response.json"},
-        {"$ref": "messages/outlet-removed-notification.json"}
+        {"$ref": "messages/outlet-removed-notification.json"},
+        {"$ref": "messages/opi-handler-added-notification.json"},
+        {"$ref": "messages/opi-handler-api-request.json"},
+        {"$ref": "messages/opi-handler-api-response.json"},
+        {"$ref": "messages/opi-handler-unload-request.json"},
+        {"$ref": "messages/opi-handler-unload-response.json"}
       ]
     }
   }
