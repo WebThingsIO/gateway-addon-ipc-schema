@@ -45,7 +45,11 @@
         {"$ref": "messages/device-set-property-command.json"},
         {"$ref": "messages/notifier-added-notification.json"},
         {"$ref": "messages/notifier-unload-request.json"},
-        {"$ref": "messages/notifier-unload-response.json"}
+        {"$ref": "messages/notifier-unload-response.json"},
+        {"$ref": "messages/outlet-added-notification.json"},
+        {"$ref": "messages/outlet-notify-request.json"},
+        {"$ref": "messages/outlet-notify-response.json"},
+        {"$ref": "messages/outlet-removed-notification.json"}
       ]
     }
   }

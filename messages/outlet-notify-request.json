@@ -1,0 +1,75 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://raw.githubusercontent.com/mozilla-iot/gateway-addon-ipc-schema/master/messages/outlet-notify-request.json",
+  "title": "Outlet Notify Request",
+  "description": "Notify a user via an outlet",
+  "type": "object",
+  "required": [
+    "messageType",
+    "data"
+  ],
+  "properties": {
+    "messageType": {
+      "type": "integer",
+      "title": "Message Type",
+      "description": "The message type, used by the IPC client and server to differentiate messages",
+      "const": 16386
+    },
+    "data": {
+      "type": "object",
+      "title": "Message Data",
+      "description": "Message-specific data",
+      "required": [
+        "pluginId",
+        "notifierId",
+        "outletId",
+        "messageId",
+        "title",
+        "message",
+        "level"
+      ],
+      "properties": {
+        "pluginId": {
+          "type": "string",
+          "title": "Plugin ID",
+          "description": "ID of the plugin"
+        },
+        "notifierId": {
+          "type": "string",
+          "title": "Notifier ID",
+          "description": "ID of the notifier"
+        },
+        "outletId": {
+          "type": "string",
+          "title": "Outlet ID",
+          "description": "ID of the outlet"
+        },
+        "messageId": {
+          "type": "integer",
+          "title": "Message ID",
+          "description": "Unique ID of this message"
+        },
+        "title": {
+          "type": "string",
+          "title": "Title",
+          "description": "Title of the notification"
+        },
+        "message": {
+          "type": "string",
+          "title": "Message",
+          "description": "Message of the notification"
+        },
+        "level": {
+          "type": "integer",
+          "enum": [
+            0,
+            1,
+            2
+          ],
+          "title": "Level",
+          "description": "Priority level of the notification, 0 being the lowest priority"
+        }
+      }
+    }
+  }
+}
