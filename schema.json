@@ -17,7 +17,17 @@
         {"$ref": "messages/plugin-register-response.json"},
         {"$ref": "messages/plugin-unload-request.json"},
         {"$ref": "messages/plugin-unload-response.json"},
-        {"$ref": "messages/plugin-error-notification.json"}
+        {"$ref": "messages/plugin-error-notification.json"},
+        {"$ref": "messages/adapter-added-notification.json"},
+        {"$ref": "messages/adapter-cancel-pairing-command.json"},
+        {"$ref": "messages/adapter-cancel-remove-device-command.json"},
+        {"$ref": "messages/adapter-pairing-prompt-notification.json"},
+        {"$ref": "messages/adapter-remove-device-request.json"},
+        {"$ref": "messages/adapter-remove-device-response.json"},
+        {"$ref": "messages/adapter-start-pairing-command.json"},
+        {"$ref": "messages/adapter-unload-request.json"},
+        {"$ref": "messages/adapter-unload-response.json"},
+        {"$ref": "messages/adapter-unpairing-prompt-notification.json"}
       ]
     }
   }

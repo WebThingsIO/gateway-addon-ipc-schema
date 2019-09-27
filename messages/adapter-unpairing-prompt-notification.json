@@ -1,0 +1,56 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://raw.githubusercontent.com/mozilla-iot/gateway-addon-ipc-schema/master/messages/adapter-unpairing-prompt-notification.json",
+  "title": "Adapter Unpairing Prompt Notification",
+  "description": "Notification that a prompt should be presented to the user while unpairing",
+  "type": "object",
+  "required": [
+    "messageType",
+    "data"
+  ],
+  "properties": {
+    "messageType": {
+      "type": "integer",
+      "title": "Message Type",
+      "description": "The message type, used by the IPC client and server to differentiate messages",
+      "const": 4102
+    },
+    "data": {
+      "type": "object",
+      "title": "Message Data",
+      "description": "Message-specific data",
+      "required": [
+        "pluginId",
+        "adapterId",
+        "prompt"
+      ],
+      "properties": {
+        "pluginId": {
+          "type": "string",
+          "title": "Plugin ID",
+          "description": "ID of the plugin"
+        },
+        "adapterId": {
+          "type": "string",
+          "title": "Adapter ID",
+          "description": "ID of the adapter"
+        },
+        "prompt": {
+          "type": "string",
+          "title": "Prompt",
+          "description": "The message to present to the user"
+        },
+        "url": {
+          "type": "string",
+          "title": "URL",
+          "description": "URL of a web page containing more information"
+        },
+        "deviceId": {
+          "type": "string",
+          "title": "Device ID",
+          "description": "ID of specific device the prompt pertains to"
+        }
+      }
+    }
+  }
+}
