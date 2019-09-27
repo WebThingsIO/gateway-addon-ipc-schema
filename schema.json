@@ -42,7 +42,10 @@
         {"$ref": "messages/device-set-credentials-response.json"},
         {"$ref": "messages/device-set-pin-request.json"},
         {"$ref": "messages/device-set-pin-response.json"},
-        {"$ref": "messages/device-set-property-command.json"}
+        {"$ref": "messages/device-set-property-command.json"},
+        {"$ref": "messages/notifier-added-notification.json"},
+        {"$ref": "messages/notifier-unload-request.json"},
+        {"$ref": "messages/notifier-unload-response.json"}
       ]
     }
   }
