@@ -9,6 +9,16 @@
         1,
         2
       ]
+    },
+    "any": {
+      "oneOf": [
+        {"type": "null"},
+        {"type": "boolean"},
+        {"type": "object"},
+        {"type": "array"},
+        {"type": "number"},
+        {"type": "string"}
+      ]
     }
   }
 }

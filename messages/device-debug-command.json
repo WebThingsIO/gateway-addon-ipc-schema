@@ -50,14 +50,7 @@
         "params": {
           "title": "Params",
           "description": "Input to the command",
-          "oneOf": [
-            {"type": "null"},
-            {"type": "boolean"},
-            {"type": "object"},
-            {"type": "array"},
-            {"type": "number"},
-            {"type": "string"}
-          ]
+          "$ref": "definitions.json#/definitions/any"
         }
       }
     }

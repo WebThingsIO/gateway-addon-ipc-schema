@@ -50,14 +50,7 @@
         "propertyValue": {
           "title": "Property Value",
           "description": "New value of the property",
-          "oneOf": [
-            {"type": "null"},
-            {"type": "boolean"},
-            {"type": "object"},
-            {"type": "array"},
-            {"type": "number"},
-            {"type": "string"}
-          ]
+          "$ref": "definitions.json#/definitions/any"
         }
       }
     }
