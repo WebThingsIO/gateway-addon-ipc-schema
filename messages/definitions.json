@@ -1,6 +1,6 @@
 {
   "$schema": "http://json-schema.org/draft-07/schema#",
-  "$id": "https://raw.githubusercontent.com/mozilla-iot/gateway-addon-ipc-schema/master/definitions/notification-level.json",
+  "$id": "https://raw.githubusercontent.com/mozilla-iot/gateway-addon-ipc-schema/master/messages/definitions.json",
   "definitions": {
     "NotificationLevel": {
       "type": "integer",
