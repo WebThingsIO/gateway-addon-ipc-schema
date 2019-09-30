@@ -1,0 +1,40 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://raw.githubusercontent.com/mozilla-iot/gateway-addon-ipc-schema/master/messages/mock-adapter-clear-state-request.json",
+  "title": "Mock Adapter Clear State Request",
+  "description": "Ask the mock adapter to clear its state",
+  "type": "object",
+  "required": [
+    "messageType",
+    "data"
+  ],
+  "properties": {
+    "messageType": {
+      "type": "integer",
+      "title": "Message Type",
+      "description": "The message type, used by the IPC client and server to differentiate messages",
+      "const": 61446
+    },
+    "data": {
+      "type": "object",
+      "title": "Message Data",
+      "description": "Message-specific data",
+      "required": [
+        "pluginId",
+        "adapterId"
+      ],
+      "properties": {
+        "pluginId": {
+          "type": "string",
+          "title": "Plugin ID",
+          "description": "ID of the plugin"
+        },
+        "adapterId": {
+          "type": "string",
+          "title": "Adapter ID",
+          "description": "ID of the adapter"
+        }
+      }
+    }
+  }
+}
