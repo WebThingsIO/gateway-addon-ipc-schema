@@ -22,6 +22,7 @@
       "required": [
         "pluginId",
         "ipcBaseAddr",
+        "gatewayVersion",
         "userProfile"
       ],
       "properties": {
@@ -34,6 +35,11 @@
           "type": "string",
           "title": "IPC Base Address",
           "description": "Base address of the nanomsg IPC socket"
+        },
+        "gatewayVersion": {
+          "type": "string",
+          "title": "Gateway Version",
+          "description": "Version of the running gateway"
         },
         "userProfile": {
           "type": "object",
