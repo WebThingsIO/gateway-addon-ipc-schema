@@ -23,7 +23,8 @@
         "pluginId",
         "ipcBaseAddr",
         "gatewayVersion",
-        "userProfile"
+        "userProfile",
+        "preferences"
       ],
       "properties": {
         "pluginId": {
@@ -46,6 +47,7 @@
           "title": "User Profile",
           "description": "User profile information, e.g. file paths of various things",
           "required": [
+            "addonsDir",
             "baseDir",
             "configDir",
             "dataDir",
@@ -54,6 +56,11 @@
             "gatewayDir"
           ],
           "properties": {
+            "addonsDir": {
+              "type": "string",
+              "title": "Add-ons Directory",
+              "description": "Add-ons directory, e.g. \"/home/pi/.mozilla-iot/addons\""
+            },
             "baseDir": {
               "type": "string",
               "title": "Base Directory",
@@ -83,6 +90,37 @@
               "type": "string",
               "title": "Gateway Directory",
               "description": "Gateway directory, e.g. \"/home/pi/mozilla-iot/gateway\""
+            }
+          }
+        },
+        "preferences": {
+          "type": "object",
+          "title": "Preferences",
+          "description": "User preferences",
+          "required": [
+            "language",
+            "units"
+          ],
+          "properties": {
+            "language": {
+              "type": "string",
+              "title": "Language",
+              "description": "User's preferred language, e.g. \"en-US\""
+            },
+            "units": {
+              "type": "object",
+              "title": "Units",
+              "description": "User's preferred units",
+              "required": [
+                "temperature"
+              ],
+              "properties": {
+                "temperature": {
+                  "type": "string",
+                  "title": "Temperature",
+                  "description": "Preferred temperature unit, e.g. \"degree celsius\""
+                }
+              }
             }
           }
         }
