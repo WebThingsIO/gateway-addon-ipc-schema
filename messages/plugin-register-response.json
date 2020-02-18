@@ -21,7 +21,6 @@
       "description": "Message-specific data",
       "required": [
         "pluginId",
-        "ipcBaseAddr",
         "gatewayVersion",
         "userProfile",
         "preferences"
@@ -31,11 +30,6 @@
           "type": "string",
           "title": "Plugin ID",
           "description": "ID of the plugin which has been registered"
-        },
-        "ipcBaseAddr": {
-          "type": "string",
-          "title": "IPC Base Address",
-          "description": "Base address of the nanomsg IPC socket"
         },
         "gatewayVersion": {
           "type": "string",
