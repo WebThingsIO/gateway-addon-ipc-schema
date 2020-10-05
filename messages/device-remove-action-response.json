@@ -1,6 +1,6 @@
 {
   "$schema": "http://json-schema.org/draft-07/schema#",
-  "$id": "https://raw.githubusercontent.com/mozilla-iot/gateway-addon-ipc-schema/master/messages/device-remove-action-response.json",
+  "$id": "https://raw.githubusercontent.com/WebThingsIO/gateway-addon-ipc-schema/master/messages/device-remove-action-response.json",
   "title": "Device Remove Action Response",
   "description": "Notice that an action has been removed/cancelled from a device",
   "type": "object",

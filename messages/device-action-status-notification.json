@@ -1,6 +1,6 @@
 {
   "$schema": "http://json-schema.org/draft-07/schema#",
-  "$id": "https://raw.githubusercontent.com/mozilla-iot/gateway-addon-ipc-schema/master/messages/device-action-status-notification.json",
+  "$id": "https://raw.githubusercontent.com/WebThingsIO/gateway-addon-ipc-schema/master/messages/device-action-status-notification.json",
   "title": "Device Action Status Notification",
   "description": "Notification that an action's status has changed on a device",
   "type": "object",

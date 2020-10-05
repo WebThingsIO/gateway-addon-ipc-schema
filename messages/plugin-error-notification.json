@@ -1,6 +1,6 @@
 {
   "$schema": "http://json-schema.org/draft-07/schema#",
-  "$id": "https://raw.githubusercontent.com/mozilla-iot/gateway-addon-ipc-schema/master/messages/plugin-error-notification.json",
+  "$id": "https://raw.githubusercontent.com/WebThingsIO/gateway-addon-ipc-schema/master/messages/plugin-error-notification.json",
   "title": "Plugin Error Notification",
   "description": "Notification that a plugin has encountered an error while loading",
   "type": "object",

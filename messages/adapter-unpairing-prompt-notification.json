@@ -1,6 +1,6 @@
 {
   "$schema": "http://json-schema.org/draft-07/schema#",
-  "$id": "https://raw.githubusercontent.com/mozilla-iot/gateway-addon-ipc-schema/master/messages/adapter-unpairing-prompt-notification.json",
+  "$id": "https://raw.githubusercontent.com/WebThingsIO/gateway-addon-ipc-schema/master/messages/adapter-unpairing-prompt-notification.json",
   "title": "Adapter Unpairing Prompt Notification",
   "description": "Notification that a prompt should be presented to the user while unpairing",
   "type": "object",

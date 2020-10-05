@@ -1,6 +1,6 @@
 {
   "$schema": "http://json-schema.org/draft-07/schema#",
-  "$id": "https://raw.githubusercontent.com/mozilla-iot/gateway-addon-ipc-schema/master/messages/notifier-unload-response.json",
+  "$id": "https://raw.githubusercontent.com/WebThingsIO/gateway-addon-ipc-schema/master/messages/notifier-unload-response.json",
   "title": "Notifier Unload Response",
   "description": "Notice that an notifier is unloaded",
   "type": "object",

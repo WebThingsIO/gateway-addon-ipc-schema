@@ -1,6 +1,6 @@
 {
   "$schema": "http://json-schema.org/draft-07/schema#",
-  "$id": "https://raw.githubusercontent.com/mozilla-iot/gateway-addon-ipc-schema/master/messages/mock-adapter-add-device-request.json",
+  "$id": "https://raw.githubusercontent.com/WebThingsIO/gateway-addon-ipc-schema/master/messages/mock-adapter-add-device-request.json",
   "title": "Mock Adapter Add Device Request",
   "description": "Ask the mock adapter to add a new device",
   "type": "object",

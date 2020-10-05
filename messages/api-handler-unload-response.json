@@ -1,6 +1,6 @@
 {
   "$schema": "http://json-schema.org/draft-07/schema#",
-  "$id": "https://raw.githubusercontent.com/mozilla-iot/gateway-addon-ipc-schema/master/messages/api-handler-unload-response.json",
+  "$id": "https://raw.githubusercontent.com/WebThingsIO/gateway-addon-ipc-schema/master/messages/api-handler-unload-response.json",
   "title": "API Handler Unload Response",
   "description": "Notice that an API handler is unloaded",
   "type": "object",

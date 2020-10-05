@@ -1,6 +1,6 @@
 {
   "$schema": "http://json-schema.org/draft-07/schema#",
-  "$id": "https://raw.githubusercontent.com/mozilla-iot/gateway-addon-ipc-schema/master/messages/adapter-cancel-remove-device-command.json",
+  "$id": "https://raw.githubusercontent.com/WebThingsIO/gateway-addon-ipc-schema/master/messages/adapter-cancel-remove-device-command.json",
   "title": "Adapter Cancel Remove Device Command",
   "description": "Tell an adapter to cancel the removal of a device",
   "type": "object",

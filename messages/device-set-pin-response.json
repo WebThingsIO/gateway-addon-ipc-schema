@@ -1,6 +1,6 @@
 {
   "$schema": "http://json-schema.org/draft-07/schema#",
-  "$id": "https://raw.githubusercontent.com/mozilla-iot/gateway-addon-ipc-schema/master/messages/device-set-pin-response.json",
+  "$id": "https://raw.githubusercontent.com/WebThingsIO/gateway-addon-ipc-schema/master/messages/device-set-pin-response.json",
   "title": "Device Set PIN Response",
   "description": "Notice that setting the PIN on a device has finished",
   "type": "object",

@@ -1,6 +1,6 @@
 {
   "$schema": "http://json-schema.org/draft-07/schema#",
-  "$id": "https://raw.githubusercontent.com/mozilla-iot/gateway-addon-ipc-schema/master/messages/adapter-start-pairing-command.json",
+  "$id": "https://raw.githubusercontent.com/WebThingsIO/gateway-addon-ipc-schema/master/messages/adapter-start-pairing-command.json",
   "title": "Adapter Start Pairing Command",
   "description": "Tell an adapter to start the pairing process",
   "type": "object",

@@ -1,6 +1,6 @@
 {
   "$schema": "http://json-schema.org/draft-07/schema#",
-  "$id": "https://raw.githubusercontent.com/mozilla-iot/gateway-addon-ipc-schema/master/messages/adapter-unload-request.json",
+  "$id": "https://raw.githubusercontent.com/WebThingsIO/gateway-addon-ipc-schema/master/messages/adapter-unload-request.json",
   "title": "Adapter Unload Request",
   "description": "Request that an adapter is unloaded",
   "type": "object",
