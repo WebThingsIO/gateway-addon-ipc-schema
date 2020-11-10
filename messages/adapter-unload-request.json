@@ -17,7 +17,7 @@
     },
     "data": {
       "type": "object",
-      "title": "Message Data",
+      "title": "Adapter Unload Request Message Data",
       "description": "Message-specific data",
       "required": [
         "pluginId",
