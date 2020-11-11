@@ -17,7 +17,7 @@
     },
     "data": {
       "type": "object",
-      "title": "Message Data",
+      "title": "Device Remove Action Response Message Data",
       "description": "Message-specific data",
       "required": [
         "pluginId",

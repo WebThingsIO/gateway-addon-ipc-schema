@@ -17,7 +17,7 @@
     },
     "data": {
       "type": "object",
-      "title": "Message Data",
+      "title": "Adapter Added Notification Message Data",
       "description": "Message-specific data",
       "required": [
         "pluginId",
