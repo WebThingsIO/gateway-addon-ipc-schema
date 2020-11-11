@@ -56,7 +56,7 @@
         },
         "message": {
           "type": "string",
-          "title": "Message",
+          "title": "Notification message",
           "description": "Message of the notification"
         },
         "level": {
