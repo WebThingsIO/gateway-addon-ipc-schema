@@ -53,37 +53,37 @@
             "addonsDir": {
               "type": "string",
               "title": "Add-ons Directory",
-              "description": "Add-ons directory, e.g. \"/home/pi/.mozilla-iot/addons\""
+              "description": "Add-ons directory, e.g. \"/home/pi/.webthings/addons\""
             },
             "baseDir": {
               "type": "string",
               "title": "Base Directory",
-              "description": "Base user profile directory, e.g. \"/home/pi/.mozilla-iot\""
+              "description": "Base user profile directory, e.g. \"/home/pi/.webthings\""
             },
             "configDir": {
               "type": "string",
               "title": "Configuration Directory",
-              "description": "Configuration directory, e.g. \"/home/pi/.mozilla-iot/config\""
+              "description": "Configuration directory, e.g. \"/home/pi/.webthings/config\""
             },
             "dataDir": {
               "type": "string",
               "title": "Data Directory",
-              "description": "Data directory, e.g. \"/home/pi/.mozilla-iot/data\""
+              "description": "Data directory, e.g. \"/home/pi/.webthings/data\""
             },
             "mediaDir": {
               "type": "string",
               "title": "Media Directory",
-              "description": "Media directory, e.g. \"/home/pi/.mozilla-iot/media\""
+              "description": "Media directory, e.g. \"/home/pi/.webthings/media\""
             },
             "logDir": {
               "type": "string",
               "title": "Log Directory",
-              "description": "Log directory, e.g. \"/home/pi/.mozilla-iot/log\""
+              "description": "Log directory, e.g. \"/home/pi/.webthings/log\""
             },
             "gatewayDir": {
               "type": "string",
               "title": "Gateway Directory",
-              "description": "Gateway directory, e.g. \"/home/pi/mozilla-iot/gateway\""
+              "description": "Gateway directory, e.g. \"/home/pi/webthings/gateway\""
             }
           }
         },
