@@ -42,9 +42,7 @@
           "description": "ID of the device"
         },
         "device": {
-          "type": "object",
-          "title": "Device",
-          "description": "Description of the device"
+          "$ref": "definitions.json#/definitions/device"
         }
       }
     }
