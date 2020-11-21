@@ -36,7 +36,7 @@
           "description": "ID of the adapter"
         },
         "device": {
-          "$ref": "device.json"
+          "$ref": "definitions.json#/definitions/device"
         }
       }
     }
