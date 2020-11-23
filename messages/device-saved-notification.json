@@ -42,7 +42,7 @@
           "description": "ID of the device"
         },
         "device": {
-          "$ref": "definitions.json#/definitions/device"
+          "$ref": "definitions.json#/definitions/deviceWithoutId"
         }
       }
     }
