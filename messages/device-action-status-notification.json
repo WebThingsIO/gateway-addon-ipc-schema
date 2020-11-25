@@ -43,8 +43,44 @@
         },
         "action": {
           "type": "object",
-          "title": "Action",
-          "description": "Description of the action"
+          "title": "Action description",
+          "description": "Description of the action",
+          "required": [
+            "id",
+            "name",
+            "status",
+            "timeRequested"
+          ],
+          "properties": {
+            "id": {
+              "type": "string",
+              "title": "Action ID",
+              "description": "ID of the Action"
+            },
+            "name": {
+              "type": "string",
+              "title": "Action name",
+              "description": "Name of the Action"
+            },
+            "input": {
+              "$ref": "definitions.json#/definitions/any"
+            },
+            "status": {
+              "type": "string",
+              "title": "Action status",
+              "description": "Status of the Action"
+            },
+            "timeRequested": {
+              "type": "string",
+              "title": "Action request time",
+              "description": "Request time of the Action"
+            },
+            "timeCompleted": {
+              "type": "string",
+              "title": "Action completion time",
+              "description": "Completion time of the Action"
+            }
+          }
         }
       }
     }

@@ -37,8 +37,24 @@
         },
         "outlet": {
           "type": "object",
-          "title": "Outlet",
-          "description": "Description of the outlet"
+          "title": "Outlet description",
+          "description": "Description of the outlet",
+          "required": [
+            "id",
+            "name"
+          ],
+          "properties": {
+            "id": {
+              "type": "string",
+              "title": "Outlet ID",
+              "description": "ID of the Outlet"
+            },
+            "name": {
+              "type": "string",
+              "title": "Outlet name",
+              "description": "Name of the Outlet"
+            }
+          }
         }
       }
     }

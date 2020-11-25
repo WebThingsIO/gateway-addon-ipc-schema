@@ -11,6 +11,7 @@
       ]
     },
     "any": {
+      "title": "Any",
       "oneOf": [
         {"type": "null"},
         {"type": "boolean"},
@@ -187,6 +188,11 @@
           "title": "Property type",
           "description": "The type of the property"
         },
+        "name": {
+          "type": "string",
+          "title": "Property name",
+          "description": "The name of the property"
+        },
         "title": {
           "type": "string",
           "title": "Property title",
@@ -254,6 +260,11 @@
           "type": "boolean",
           "title": "Property visible",
           "description": "If the property is visible"
+        },
+        "value": {
+          "$ref": "definitions.json#/definitions/any",
+          "title": "Property value",
+          "description": "The value of the property"
         }
       }
     },
@@ -329,44 +340,48 @@
           }
         },
         "input": {
-          "anyOf": [
-            {
-              "type": "object",
-              "title": "Object action input",
-              "description": "An object action input",
-              "required": [
-                "type",
-                "properties"
-              ],
-              "properties": {
-                "type": {
-                  "type": "string",
-                  "title": "Object input type",
-                  "description": "The type of the input",
-                  "enum": [
-                    "object"
-                  ]
-                },
-                "properties": {
-                  "type": "object",
-                  "title": "Action input properties",
-                  "description": "A map of action input properties",
-                  "patternProperties": {
-                    ".*": {
-                      "$ref": "#/definitions/actionInput"
-                    }
-                  }
-                }
-              }
-            },
-            {
-              "$ref": "#/definitions/actionInput"
-            }
-          ]
+          "$ref": "#/definitions/actionInput"
         }
       }
     },
     "actionInput": {
+      "title": "Action input",
+      "anyOf": [
+        {
+          "type": "object",
+          "title": "Object action input",
+          "description": "An object action input",
+          "required": [
+            "type",
+            "properties"
+          ],
+          "properties": {
+            "type": {
+              "type": "string",
+              "title": "Object input type",
+              "description": "The type of the input",
+              "enum": [
+                "object"
+              ]
+            },
+            "properties": {
+              "type": "object",
+              "title": "Action input properties",
+              "description": "A map of action input properties",
+              "patternProperties": {
+                ".*": {
+                  "$ref": "#/definitions/actionInputProperty"
+                }
+              }
+            }
+          }
+        },
+        {
+          "$ref": "#/definitions/actionInputProperty"
+        }
+      ]
+    },
+    "actionInputProperty": {
       "type": "object",
       "title": "Action input property",
       "description": "An action input property",
