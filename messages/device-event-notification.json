@@ -43,8 +43,27 @@
         },
         "event": {
           "type": "object",
-          "title": "Event",
-          "description": "Description of the event"
+          "title": "Event description",
+          "description": "Description of the event",
+          "required": [
+            "name",
+            "timestamp"
+          ],
+          "properties": {
+            "name": {
+              "type": "string",
+              "title": "Event name",
+              "description": "Name of the event"
+            },
+            "data": {
+              "$ref": "definitions.json#/definitions/any"
+            },
+            "timestamp": {
+              "type": "string",
+              "title": "Event timestamp",
+              "description": "Timestamp of the event"
+            }
+          }
         }
       }
     }

@@ -36,7 +36,7 @@
           "description": "ID of the notifier"
         },
         "outletId": {
-          "type": "object",
+          "type": "string",
           "title": "Outlet ID",
           "description": "ID of the outlet which was removed"
         }
