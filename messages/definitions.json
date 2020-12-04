@@ -256,11 +256,6 @@
           "title": "Property read-only",
           "description": "If the property is read-only"
         },
-        "visible": {
-          "type": "boolean",
-          "title": "Property visible",
-          "description": "If the property is visible"
-        },
         "value": {
           "$ref": "definitions.json#/definitions/any",
           "title": "Property value",
