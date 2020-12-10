@@ -46,9 +46,7 @@
           "title": "Response",
           "description": "Outgoing response",
           "required": [
-            "status",
-            "contentType",
-            "content"
+            "status"
           ],
           "properties": {
             "status": {
