@@ -31,7 +31,6 @@
         {"$ref": "messages/device-action-status-notification.json"},
         {"$ref": "messages/device-added-notification.json"},
         {"$ref": "messages/device-connected-state-notification.json"},
-        {"$ref": "messages/device-debug-command.json"},
         {"$ref": "messages/device-event-notification.json"},
         {"$ref": "messages/device-property-changed-notification.json"},
         {"$ref": "messages/device-remove-action-request.json"},
