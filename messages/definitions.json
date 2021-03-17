@@ -455,10 +455,10 @@
           "title": "Event Description",
           "description": "Description of the event"
         },
-        "links": {
+        "forms": {
           "type": "array",
           "items": {
-            "$ref": "#/definitions/link"
+            "$ref": "#/definitions/form_element_event"
           }
         },
         "type": {
