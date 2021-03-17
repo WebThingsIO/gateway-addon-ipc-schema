@@ -329,10 +329,10 @@
           "title": "Action Description",
           "description": "Description of the Action"
         },
-        "links": {
+        "forms": {
           "type": "array",
           "items": {
-            "$ref": "#/definitions/link"
+            "$ref": "#/definitions/form_element_action"
           }
         },
         "input": {
