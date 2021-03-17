@@ -180,8 +180,7 @@
       "title": "Property",
       "description": "Description of the Property",
       "required": [
-        "type",
-        "forms"
+        "type"
       ],
       "properties": {
         "@type": {
