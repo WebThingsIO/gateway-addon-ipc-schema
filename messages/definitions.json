@@ -203,10 +203,10 @@
           "title": "Property Description",
           "description": "Description of the property"
         },
-        "links": {
+        "forms": {
           "type": "array",
           "items": {
-            "$ref": "#/definitions/link"
+            "$ref": "#/definitions/form_element_property"
           }
         },
         "type": {
@@ -328,10 +328,10 @@
           "title": "Action Description",
           "description": "Description of the Action"
         },
-        "links": {
+        "forms": {
           "type": "array",
           "items": {
-            "$ref": "#/definitions/link"
+            "$ref": "#/definitions/form_element_action"
           }
         },
         "input": {
@@ -455,10 +455,10 @@
           "title": "Event Description",
           "description": "Description of the event"
         },
-        "links": {
+        "forms": {
           "type": "array",
           "items": {
-            "$ref": "#/definitions/link"
+            "$ref": "#/definitions/form_element_event"
           }
         },
         "type": {
@@ -504,6 +504,203 @@
           }
         }
       }
+    },
+    "anyUri": {
+      "type": "string"
+    },
+    "security": {
+      "oneOf": [
+        {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        {
+          "type": "string"
+        }
+      ]
+    },
+    "scopes": {
+      "oneOf": [
+        {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        {
+          "type": "string"
+        }
+      ]
+    },
+    "form_element":{
+      "title": "Form",
+      "type":"object",
+      "properties": {
+        "href": {
+          "$ref": "#/definitions/anyUri"
+        },
+        "contentType": {
+          "type": "string"
+        },
+        "contentCoding": {
+          "type": "string"
+        },
+        "subprotocol": {
+          "type": "string"
+        },
+        "security": {
+          "$ref": "#/definitions/security"
+        },
+        "scopes": {
+          "$ref": "#/definitions/scopes"
+        },
+        "response": {
+          "type": "object",
+          "properties": {
+            "contentType": {
+              "type": "string"
+            }
+          }
+        }
+      },
+      "required": [
+        "href"
+      ]
+    },
+    "form_element_property": {
+      "title": "PropertyForm",
+      "allOf":[
+        { "$ref": "#/definitions/form_element" },
+        {
+          "properties": {
+            "op": {
+              "oneOf": [
+                {
+                  "type": "string",
+                  "enum": [
+                    "readproperty",
+                    "writeproperty",
+                    "observeproperty",
+                    "unobserveproperty"
+                  ]
+                },
+                {
+                  "type": "array",
+                  "items": {
+                    "type": "string",
+                    "enum": [
+                      "readproperty",
+                      "writeproperty",
+                      "observeproperty",
+                      "unobserveproperty"
+                    ]
+                  }
+                }
+              ]
+            }
+          }
+        }
+      ]
+    },
+    "form_element_action": {
+      "allOf": [
+        {
+          "$ref": "#/definitions/form_element"
+        },
+        {
+          "properties": {
+            "op": {
+              "oneOf": [
+                {
+                  "type": "string",
+                  "enum": [
+                    "invokeaction"
+                  ]
+                },
+                {
+                  "type": "array",
+                  "items": {
+                    "type": "string",
+                    "enum": [
+                      "invokeaction"
+                    ]
+                  }
+                }
+              ]
+            }
+          }
+        }
+      ]
+    },
+    "form_element_event": {
+      "allOf": [
+        {
+          "$ref": "#/definitions/form_element"
+        },
+        {
+          "properties": {
+            "op": {
+              "oneOf": [
+                {
+                  "type": "string",
+                  "enum": [
+                    "subscribeevent",
+                    "unsubscribeevent"
+                  ]
+                },
+                {
+                  "type": "array",
+                  "items": {
+                    "type": "string",
+                    "enum": [
+                      "subscribeevent",
+                      "unsubscribeevent"
+                    ]
+                  }
+                }
+              ]
+            }
+          }
+        }
+      ]
+    },
+    "form_element_root": {
+      "allOf": [
+        {
+          "$ref": "#/definitions/form_element"
+        },
+        {
+          "properties": {
+            "op": {
+              "oneOf": [
+                {
+                  "type": "string",
+                  "enum": [
+                    "readallproperties",
+                    "writeallproperties",
+                    "readmultipleproperties",
+                    "writemultipleproperties"
+                  ]
+                },
+                {
+                  "type": "array",
+                  "items": {
+                    "type": "string",
+                    "enum": [
+                      "readallproperties",
+                      "writeallproperties",
+                      "readmultipleproperties",
+                      "writemultipleproperties"
+                    ]
+                  }
+                }
+              ]
+            }
+          }
+        }
+      ]
     }
   }
 }
