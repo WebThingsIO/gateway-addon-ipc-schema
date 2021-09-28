@@ -30,9 +30,21 @@
       ],
       "properties": {
         "@context": {
-          "type": "string",
-          "title": "Device context",
-          "description": "Context of the device"
+          "oneOf": [
+            {
+              "type": "string",
+              "title": "Device context",
+              "description": "JSON-LD context used by the device"
+            },
+            {
+              "type": "array",
+              "items": {
+                "type": "string",
+                "title": "Device contexts",
+                "description": "An array of JSON-LD contexts used by the device"
+              }
+            }
+          ]
         },
         "@type": {
           "type": "array",
@@ -108,9 +120,21 @@
       "description": "Description of the device",
       "properties": {
         "@context": {
-          "type": "string",
-          "title": "Device context",
-          "description": "Context of the device"
+          "oneOf": [
+            {
+              "type": "string",
+              "title": "Device context",
+              "description": "JSON-LD context used by the device"
+            },
+            {
+              "type": "array",
+              "items": {
+                "type": "string",
+                "title": "Device contexts",
+                "description": "An array of JSON-LD contexts used by the device"
+              }
+            }
+          ]
         },
         "@type": {
           "type": "array",
