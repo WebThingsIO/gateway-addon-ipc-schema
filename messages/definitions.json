@@ -478,29 +478,77 @@
         "unit": {
           "type": "string",
           "title": "Event unit",
-          "description": "The unit of the event"
+          "description": "The unit of the event (deprecated in favour of data.unit)"
         },
         "minimum": {
           "type": "number",
           "title": "Event minimum value",
-          "description": "The minimum value of the event"
+          "description": "The minimum value of the event (deprecated in favour of data.minimum)"
         },
         "maximum": {
           "type": "number",
           "title": "Event maximum value",
-          "description": "The maximum value of the event"
+          "description": "The maximum value of the event (deprecated in favour of data.maximum)"
         },
         "multipleOf": {
           "type": "number",
           "title": "Event value precision",
-          "description": "The precision of the value"
+          "description": "The precision of the value (deprecated in favour of data.multipleOf)"
         },
         "enum": {
           "type": "array",
           "items": {
             "title": "Property values enum",
-            "description": "The possible values of the property",
+            "description": "The possible values of the property (deprecated in favour of data.enum)",
             "$ref": "#/definitions/any"
+          }
+        },
+        "data": {
+          "type": "object",
+          "description": "Event payload data schema",
+          "properties": {
+            "type": {
+              "type": "string",
+              "title": "Event value type",
+              "description": "The type of the event value",
+              "enum": [
+                "null",
+                "boolean",
+                "object",
+                "array",
+                "number",
+                "integer",
+                "string"
+              ]
+            },
+            "unit": {
+              "type": "string",
+              "title": "Event unit",
+              "description": "The unit of the event"
+            },
+            "minimum": {
+              "type": "number",
+              "title": "Event minimum value",
+              "description": "The minimum value of the event"
+            },
+            "maximum": {
+              "type": "number",
+              "title": "Event maximum value",
+              "description": "The maximum value of the event"
+            },
+            "multipleOf": {
+              "type": "number",
+              "title": "Event value precision",
+              "description": "The precision of the value"
+            },
+            "enum": {
+              "type": "array",
+              "items": {
+                "title": "Property values enum",
+                "description": "The possible values of the property",
+                "$ref": "#/definitions/any"
+              }
+            }
           }
         }
       }
