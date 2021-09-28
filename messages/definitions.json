@@ -284,6 +284,11 @@
         "mediaType": {
           "type": "string",
           "title": "Link media type",
+          "description": "The media type of the link (deprecated in favour of type)"
+        },
+        "type": {
+          "type": "string",
+          "title": "Link media type",
           "description": "The media type of the link"
         }
       }
