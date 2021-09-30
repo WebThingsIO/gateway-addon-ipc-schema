@@ -30,21 +30,7 @@
       ],
       "properties": {
         "@context": {
-          "oneOf": [
-            {
-              "type": "string",
-              "title": "Device context",
-              "description": "JSON-LD context used by the device"
-            },
-            {
-              "type": "array",
-              "items": {
-                "type": "string",
-                "title": "Device contexts",
-                "description": "An array of JSON-LD contexts used by the device"
-              }
-            }
-          ]
+          "$ref": "#/definitions/device-context"
         },
         "@type": {
           "type": "array",
@@ -120,21 +106,7 @@
       "description": "Description of the device",
       "properties": {
         "@context": {
-          "oneOf": [
-            {
-              "type": "string",
-              "title": "Device context",
-              "description": "JSON-LD context used by the device"
-            },
-            {
-              "type": "array",
-              "items": {
-                "type": "string",
-                "title": "Device contexts",
-                "description": "An array of JSON-LD contexts used by the device"
-              }
-            }
-          ]
+          "$ref": "#/definitions/device-context"
         },
         "@type": {
           "type": "array",
@@ -308,7 +280,8 @@
         "mediaType": {
           "type": "string",
           "title": "Link media type",
-          "description": "The media type of the link (deprecated in favour of type)"
+          "description": "The media type of the link (deprecated in favour of type)",
+          "deprecated": true
         },
         "type": {
           "type": "string",
@@ -493,7 +466,7 @@
         "type": {
           "type": "string",
           "title": "Event value type",
-          "description": "The type of the event value",
+          "description": "Event payload data schema (deprecated in favour of data.type)",
           "enum": [
             "null",
             "boolean",
@@ -502,34 +475,40 @@
             "number",
             "integer",
             "string"
-          ]
+          ],
+          "deprecated": true
         },
         "unit": {
           "type": "string",
           "title": "Event unit",
-          "description": "The unit of the event (deprecated in favour of data.unit)"
+          "description": "The unit of the event (deprecated in favour of data.unit)",
+          "deprecated": true
         },
         "minimum": {
           "type": "number",
           "title": "Event minimum value",
-          "description": "The minimum value of the event (deprecated in favour of data.minimum)"
+          "description": "The minimum value of the event (deprecated in favour of data.minimum)",
+          "deprecated": true
         },
         "maximum": {
           "type": "number",
           "title": "Event maximum value",
-          "description": "The maximum value of the event (deprecated in favour of data.maximum)"
+          "description": "The maximum value of the event (deprecated in favour of data.maximum)",
+          "deprecated": true
         },
         "multipleOf": {
           "type": "number",
           "title": "Event value precision",
-          "description": "The precision of the value (deprecated in favour of data.multipleOf)"
+          "description": "The precision of the value (deprecated in favour of data.multipleOf)",
+          "deprecated": true
         },
         "enum": {
           "type": "array",
           "items": {
             "title": "Property values enum",
             "description": "The possible values of the property (deprecated in favour of data.enum)",
-            "$ref": "#/definitions/any"
+            "$ref": "#/definitions/any",
+            "deprecated": true
           }
         },
         "data": {
@@ -775,6 +754,35 @@
                 }
               ]
             }
+          }
+        }
+      ]
+    },
+    "device-context": {
+      "oneOf": [
+        {
+          "type": "string",
+          "title": "Device context",
+          "description": "The JSON-LD context used by the device"
+        },
+        {
+          "type": "array",
+          "title": "Device contexts",
+          "description": "An array of JSON-LD contexts used by the device",
+          "items": {
+            "oneOf": [
+              {
+                "type": "string",
+                "title": "Device context",
+                "description": "A JSON-LD context used by the device"
+
+              },
+              {
+                "type": "object",
+                "title": "Prefixed device context",
+                "description": "A JSON-LD context used by the device, with prefix as key and context URI as value"
+              }
+            ]
           }
         }
       ]
