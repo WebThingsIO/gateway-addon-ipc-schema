@@ -191,7 +191,8 @@
         "name": {
           "type": "string",
           "title": "Property name",
-          "description": "The name of the property"
+          "description": "The name of the property",
+          "deprecated": true
         },
         "title": {
           "type": "string",
@@ -259,12 +260,14 @@
         "visible": {
           "type": "boolean",
           "title": "Property visible",
-          "description": "If the property is visible"
+          "description": "If the property is visible",
+          "deprecated": true
         },
         "value": {
           "$ref": "definitions.json#/definitions/any",
           "title": "Property value",
-          "description": "The value of the property"
+          "description": "The value of the property",
+          "deprecated": true
         }
       }
     },
@@ -448,7 +451,8 @@
         "name": {
           "type": "string",
           "title": "Event name",
-          "description": "The name of the event"
+          "description": "The name of the event",
+          "deprecated": true
         },
         "title": {
           "type": "string",
