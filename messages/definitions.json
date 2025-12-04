@@ -630,6 +630,7 @@
       "allOf":[
         { "$ref": "#/definitions/form_element" },
         {
+          "type": "object",
           "properties": {
             "op": {
               "oneOf": [
@@ -666,6 +667,7 @@
           "$ref": "#/definitions/form_element"
         },
         {
+          "type": "object",
           "properties": {
             "op": {
               "oneOf": [
@@ -696,6 +698,7 @@
           "$ref": "#/definitions/form_element"
         },
         {
+          "type": "object",
           "properties": {
             "op": {
               "oneOf": [
@@ -728,6 +731,7 @@
           "$ref": "#/definitions/form_element"
         },
         {
+          "type": "object",
           "properties": {
             "op": {
               "oneOf": [
